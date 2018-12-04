@@ -45,7 +45,7 @@ func (w Worker) process(id int) {
 	}
 }
 
-func UsersToDB(numWorkers int, cache Cache, queue string) {
+func CreateImageQueue(numWorkers int, cache Cache, queue string) {
 	var wg sync.WaitGroup
 	for i := 0; i < numWorkers; i++ {
 		wg.Add(1)

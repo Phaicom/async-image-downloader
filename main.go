@@ -59,7 +59,7 @@ func main() {
 	flag.Parse()
 
 	cache.Pool = cache.NewCachePool()
-	go models.UsersToDB(numWorkers, cache, createImageQueue)
+	go models.CreateImageQueue(numWorkers, cache, createImageQueue)
 
 	app := App{}
 	app.Initialize(cache)
